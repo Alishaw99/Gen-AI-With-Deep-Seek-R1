@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain_ollama import ChatOllama
+from langchain_community.chat_models import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 
 from langchain_core.prompts import (
@@ -45,8 +45,8 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-st.title("🧠 DeepSeek Code Companion")
-st.caption("🚀 Your AI Pair Programmer with Debugging Superpowers")
+st.title("🧠 DeepSeek Researcher")
+st.caption("🚀 Your AI Pair Researcher having Superpowers")
 
 # Sidebar configuration
 with st.sidebar:
@@ -74,7 +74,7 @@ llm_engine=ChatOllama(
     model=selected_model,
     base_url="http://localhost:11434",
 
-    temperature=0.3
+    temperature=0.5
 
 )
 
